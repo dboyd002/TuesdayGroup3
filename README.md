@@ -15,7 +15,7 @@ public class DocumentReader {
 			reader.close();
 			
 		} catch (IOException e) {
-			// TODO Auto-geerated catch block
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	} // end method main
