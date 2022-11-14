@@ -1,3 +1,4 @@
+package ACMclassifier;
 import java.io.*;
 import java.util.Scanner;
 
