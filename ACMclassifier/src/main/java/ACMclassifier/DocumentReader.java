@@ -15,7 +15,7 @@ import java.io.*;
 
 public class DocumentReader{
 	
-    public static String parseDoc(String filename) {
+    public static String parseDoc(String filePath) {
         try {
             BasicContentHandlerFactory basicHandlerFactory = new BasicContentHandlerFactory(
                     BasicContentHandlerFactory.HANDLER_TYPE.XML, -1
@@ -32,7 +32,7 @@ public class DocumentReader{
             );
             context.set(Parser.class, parser);
 
-            File docFile = new File(filename);
+            File docFile = new File(filePath);
             InputStream stream = new FileInputStream(docFile);
             parser.parse(stream, handler, metadata, context);
 
