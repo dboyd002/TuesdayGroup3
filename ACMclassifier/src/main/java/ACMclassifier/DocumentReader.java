@@ -1,5 +1,5 @@
 package ACMclassifier;
-package org.ea;
+//package org.ea;
 
 import org.apache.tika.Tika;
 import org.apache.tika.extractor.EmbeddedDocumentExtractor;
@@ -11,7 +11,6 @@ import org.apache.tika.sax.BasicContentHandlerFactory;
 import org.xml.sax.ContentHandler;
 
 import java.io.*;
-
 
 public class DocumentReader{
 	
