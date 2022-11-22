@@ -14,7 +14,7 @@ import java.io.*;
 
 public class DocumentReader{
 	
-    public static String parseDoc(String filePath) {
+    public static String docParser(String filePath) {
         try {
             BasicContentHandlerFactory basicHandlerFactory = new BasicContentHandlerFactory(
                     BasicContentHandlerFactory.HANDLER_TYPE.XML, -1
