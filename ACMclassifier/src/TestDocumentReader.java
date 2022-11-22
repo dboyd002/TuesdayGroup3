@@ -1,12 +1,18 @@
-import static org.junit.jupiter.api.Assertions.*;
+package ACMclassifier;
 
-import org.junit.jupiter.api.Test;
+import ACMclassifier.DocumentReader;
+import org.junit.Test;
+import org.junit.Assert;
 
-class TestDocumentReader {
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
+public class TestDocumentReader {
+	
+	@Test	
+	void TestDocumentReaderConstructor() {
+		
+		DocumentReader docP = new DocumentReader();
+		File file = new File(filePath);
+		assertTrue(file.exists());
+		
 	}
 
 }
