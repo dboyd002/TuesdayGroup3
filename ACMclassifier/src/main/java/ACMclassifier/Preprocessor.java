@@ -41,8 +41,10 @@ public class Preprocessor {
 	
 	Set<String> stopListSet = new HashSet<String>();
 	
+	//Constructor
 	public Preprocessor() {
 		
+		//Populate stopList HashSet
 		for (int i = 0; i <= stopListSet.size(); i++) {
 			stopListSet.add(stopList[i]);
 		}
