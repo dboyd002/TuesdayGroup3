@@ -2,6 +2,7 @@ package ACMclassifier;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.HashSet;
 
 public class Driver {
 
@@ -9,6 +10,8 @@ public class Driver {
 		
 		//Single String to store the inputFile metadata
 		String rawFileString = null;
+		
+		HashSet<String> tokenSet = new HashSet<String>();
 
 		Scanner in = new Scanner(System.in);
 
@@ -24,7 +27,13 @@ public class Driver {
 			e.printStackTrace();
 		}
 		
-		System.out.println(rawFileString);
+		Document.stringToTokens(rawFileString, tokenSet);
+		
+		java.util.Iterator<String> i = tokenSet.iterator();
+		
+		while (i.hasNext()) {
+			System.out.println(i.next());
+		}
 
 	}
 
