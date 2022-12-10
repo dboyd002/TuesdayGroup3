@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Preprocessor {
 	
-	String[] stopList = {
+	static String[] stopList = {
 			
 			"a",
 			"and",
@@ -73,15 +73,35 @@ public class Preprocessor {
 	}
 	
 	//Use tokens from Document class to count the word frequency
-	public int countWordFrequency() {
+	public static HashMap<String, Integer> mapWordFrequencies(String[] tokenArray) {
 		
-		return 0;
+		HashMap<String, Integer> rawSignature = new HashMap<>();
+		
+		for (String token : tokenArray) {
+			
+			Integer integer = rawSignature.get(token);
+			
+			if (integer == null) {
+				rawSignature.put(token, 1);
+			} else {
+				rawSignature.put(token, integer + 1);
+			}
+			
+		}
+		
+		return rawSignature;
 	}
 	
 	//Prune undesired words from the signature using the stop list
-	public void pruneStopWords() {
+	public static void pruneStopWords(HashMap<String, Integer> rawSignature) {
 		
-		
+		for (String stopWord : stopList) {
+			
+			if (rawSignature.containsKey(stopWord)) {
+				rawSignature.remove(stopWord);
+			}
+				
+		}
 		
 	}
 	

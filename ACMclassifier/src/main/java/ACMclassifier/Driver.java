@@ -1,7 +1,7 @@
 package ACMclassifier;
 
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.*;
 
 public class Driver {
 
@@ -31,6 +31,14 @@ public class Driver {
 		for (int i = 0; i < tokenArray.length; i++) {
 			System.out.println(tokenArray[i]);
 		}
+		
+		//Map the array of tokens onto a HashMap which stores the word frequencies
+		HashMap<String, Integer> rawSignature = Preprocessor.mapWordFrequencies(tokenArray);
+		
+		//Remove common words from the rawSignature
+		Preprocessor.pruneStopWords(rawSignature);
+		
+		System.out.println(rawSignature);
 
 	}
 
