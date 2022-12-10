@@ -26,6 +26,8 @@ dependencies {
     compile 'org.apache.tika:tika-parsers:1.11'
     
     compile 'commons-cli:commons-cli:1.4'
+    
+    compile group: 'nz.ac.waikato.cms.weka', name: 'weka-dev', version: '3.9.1'
 
     implementation 'com.google.guava:guava:28.2-jre'
 
